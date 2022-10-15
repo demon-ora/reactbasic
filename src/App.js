@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import './index.css'
+import React from 'react';
+import {data} from './books'
 
-function App() {
+
+ const complexExample = (author) => {
+  console.log(author);
+ };
+
+function App({img,title,author}) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <article>
+<img src={img} alt="hello" />
+  <p>{title}</p>
+  <button onClick={()=>complexExample(author)}>click</button>
+    </article>
+ 
+    </>
   );
 }
 
-export default App;
+function Book() {
+  return (
+    <>
+  <section className='booklist'>
+      {data.map((book, index) => {
+        return <App key={book.id} {...book}></App>;
+      })}
+    </section>
+    </>
+  );
+}
+
+
+export default Book;
