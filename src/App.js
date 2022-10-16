@@ -1,36 +1,11 @@
-import './index.css'
-import React from 'react';
-import {data} from './books'
-
-
- const complexExample = (author) => {
-  console.log(author);
- };
-
-function App({img,title,author}) {
+import React from 'react'
+import  ErrorExample from './tutorial/1-useState/setup/2-useState-basics'
+function App() {
   return (
-    <>
-    <article>
-<img src={img} alt="hello" />
-  <p>{title}</p>
-  <button onClick={()=>complexExample(author)}>click</button>
-    </article>
- 
-    </>
-  );
+    <div className='container'>
+   <ErrorExample/>
+    </div>
+  )
 }
 
-function Book() {
-  return (
-    <>
-  <section className='booklist'>
-      {data.map((book, index) => {
-        return <App key={book.id} {...book}></App>;
-      })}
-    </section>
-    </>
-  );
-}
-
-
-export default Book;
+export default App

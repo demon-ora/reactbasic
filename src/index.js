@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Book from './App';
+import App from './App.js'
+// import Book from './basic/book';
+
 
  ReactDOM.render(
-    <Book/>,
+    <App/>,
     document.getElementById('root')
 );
 
