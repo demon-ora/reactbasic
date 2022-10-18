@@ -4,14 +4,13 @@ import React, { useState } from 'react';
 // const inputValue = input.value
 // React
 // value, onChange
-// dynamic object keys
 
 const ControlledInputs = () => {
-  const [firstName, setFirstName] = useState('');
+   const [firstName, setFirstName] = useState('');
   const [email, setEmail] = useState('');
   const [people, setPeople] = useState([]);
-
-  const handleSubmit = (e) => {
+  
+ const handleSubmit = (e) => {
     e.preventDefault();
     if (firstName && email) {
       const person = { id: new Date().getTime().toString(), firstName, email };
@@ -25,9 +24,9 @@ const ControlledInputs = () => {
       console.log('empty values');
     }
   };
-  return (
-    <>
-      <article>
+
+  return <>
+        <article>
         <form className='form' onSubmit={handleSubmit}>
           <div className='form-control'>
             <label htmlFor='firstName'>Name : </label>
@@ -61,8 +60,7 @@ const ControlledInputs = () => {
           );
         })}
       </article>
-    </>
-  );
+  </>
 };
 
 export default ControlledInputs;

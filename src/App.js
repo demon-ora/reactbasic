@@ -1,5 +1,5 @@
 import React from 'react'
-import  ErrorExample from './tutorial/3-conditional-rendering/3-show-hide'
+import  ErrorExample from './tutorial/4-forms/2-multiple-inputs'
 
 function App() {
   return (
